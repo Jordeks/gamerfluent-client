@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <div>
+        <div className='header'>
             <h1>
                 GamerFluent
             </h1>
