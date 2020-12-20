@@ -1,8 +1,10 @@
 const Header = () => {
     return (
-        <h1>
-            GamerFluent
-        </h1>
+        <div>
+            <h1>
+                GamerFluent
+            </h1>
+        </div>
     )
 }
 
