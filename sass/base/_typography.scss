@@ -1,0 +1,45 @@
+// FONT OPTIONS 
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Slab', serif;
+// font-family: 'Source Code Pro', monospace;
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1.7; 
+    color: $color-gray-dark-2; 
+}
+
+.heading-primary {
+    color: $color-white; 
+    text-transform: lowercase;
+    backface-visibility: hidden;
+    position: absolute; 
+    top: 25%; 
+    left: 5%; 
+
+
+    &--main {
+        display: block;
+        font-family: 'Source Code Pro', monospace;
+        text-transform: uppercase;
+        font-size: 11rem;
+        font-weight: 300;
+        letter-spacing: 1.5rem;
+    
+        animation-name: moveInBlurredLeft;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
+
+    }
+    
+    &--sub {
+        display: block; 
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: .5rem;
+    
+        animation: slideInBlurredRight 1.2s ease-out;
+    }
+}
