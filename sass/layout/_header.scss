@@ -1,3 +1,9 @@
 .header {
-    background-image: ;
+    height: 90vh;
+    background-image: linear-gradient(to right bottom, 
+                                    rgba($color-primary-light-2, 0.8), 
+                                    rgba($color-primary-dark-2, 0.8)), 
+                                    url(./imgs/header.jpg);
+    background-size: cover;
+    background-position: top;
 }
