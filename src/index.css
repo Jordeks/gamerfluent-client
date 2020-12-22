@@ -81,7 +81,7 @@ body {
   transition-property: all, .2s;
   letter-spacing: .2rem; }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    transform: scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(14, 17, 17, 0.2); }
 
 .heading-tertiary {
@@ -94,9 +94,84 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-sm {
+  margin-top: 4rem !important; }
+
+.u-margin-top-med {
+  margin-top: 6rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.u-float-left {
+  float: left !important; }
+
+.u-float-right {
+  float: right !important; }
+
+.u-align-text-left {
+  text-align: left !important; }
+
+.u-align-text-right {
+  text-align: right !important; }
+
+.features__box {
+  color: #999;
+  position: relative;
+  border-radius: 2px; }
+  .features__box:not(:last-child) {
+    margin-bottom: .5rem; }
+
+.features__box::before {
+  content: '';
+  color: #f7f7f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #4361EE;
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+
+.features__box:hover {
+  color: #f7f7f7; }
+
+.features__box:hover::before, .features__box--active::before {
+  transform: scaleY(1);
+  width: 100%; }
+
+.features__box:active::before {
+  background-color: #4895EF; }
+
+.features__header, .features__paragraph {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10; }
+
 .header {
   height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(76, 201, 240, 0.8), rgba(58, 12, 163, 0.8)), url(./imgs/header.jpg);
   background-size: cover;
   background-position: top;
-  position: relative; }
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
