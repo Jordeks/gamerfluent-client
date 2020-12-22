@@ -1,10 +1,18 @@
 import { BrowserRouter as Router, Route, Switch, useHistory} from 'react-router-dom';
-import Header from './components/Header'
+import Home from './containers/Home'
+import Dashboard from './containers/Dashboard'
+
 
 const App = () => {
+  const history = useHistory();
   return (
     <div className="App">
-      <Header />
+      <Router>
+        <Switch location={location}>
+          <Route exact path="/Dashboard" component={Dashboard} history={history}/>
+          <Route exact path="/" component={Home} history={history}/>
+        </Switch>
+      </Router>
     </div>
   )
 }
