@@ -6,7 +6,7 @@ export default class NewsFeed extends Component {
         return (
             <div className='newsfeed'>
               <h1 className='heading-bold'>Latest News</h1>  
-              <div>
+              <div className='news-container'>
                 <NewsContainer />
               </div>
             </div>

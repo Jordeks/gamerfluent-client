@@ -296,3 +296,6 @@ body {
   margin-top: 16rem; }
   .newsfeed > * {
     transform: skewY(7deg); }
+
+.card {
+  height: 10rem; }
