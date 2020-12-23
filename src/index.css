@@ -218,49 +218,45 @@ body {
 .u-align-text-right {
   text-align: right !important; }
 
-.features__box {
-  color: #999;
-  position: relative;
-  border-radius: 2px; }
-  .features__box:not(:last-child) {
-    margin-bottom: .5rem; }
-
-.features__box::before {
-  content: '';
-  color: #f7f7f7;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 3px;
-  background-color: #4361EE;
-  transform: scaleY(0);
-  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
-
-.features__box:hover {
-  color: #f7f7f7; }
-
-.features__box:hover::before, .features__box--active::before {
-  transform: scaleY(1);
-  width: 100%; }
-
-.features__box:active::before {
-  background-color: #4895EF; }
-
-.features__header {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 2rem;
-  display: block;
-  padding: 1rem 2rem;
-  position: relative;
-  z-index: 10; }
-
-.features__paragraph {
-  font-size: 1.6rem;
-  display: block;
-  position: relative;
-  z-index: 11; }
+.features {
+  margin: 2rem; }
+  .features__box {
+    color: #999;
+    position: relative;
+    border-radius: 2px; }
+    .features__box:not(:last-child) {
+      margin-bottom: .5rem; }
+  .features__box::before {
+    content: '';
+    color: #f7f7f7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #4361EE;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .features__box:hover {
+    color: #f7f7f7; }
+  .features__box:hover::before, .features__box--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .features__box:active::before {
+    background-color: #4895EF; }
+  .features__header {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+    display: block;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10; }
+  .features__paragraph {
+    font-size: 1.6rem;
+    display: block;
+    position: relative;
+    z-index: 11; }
 
 .header {
   height: 90vh;
