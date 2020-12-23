@@ -247,13 +247,20 @@ body {
 .features__box:active::before {
   background-color: #4895EF; }
 
-.features__header, .features__paragraph {
-  text-decoration: none;
+.features__header {
   text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2rem;
   display: block;
   padding: 1rem 2rem;
   position: relative;
   z-index: 10; }
+
+.features__paragraph {
+  font-size: 1.6rem;
+  display: block;
+  position: relative;
+  z-index: 11; }
 
 .header {
   height: 90vh;
