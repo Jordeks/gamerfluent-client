@@ -77,3 +77,23 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+.heading-bold {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-tertiary, $color-tertiary-dark);
+    display: inline-block; 
+    -webkit-background-clip: text;
+    color: transparent; 
+    transition-property: all, .2s;
+    letter-spacing: .2rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 50rem;  
+
+    &:hover {
+        transform: scale(1.5);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2)
+    }
+}
