@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Features from '../components/Features'
 import NewsFeed from './NewsFeed'
 import TopUsers from './TopUsers'
+import Footer from '../components/Footer'
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Features />
             <NewsFeed />
             <TopUsers />
+            <Footer />
         </>
     )
 }
