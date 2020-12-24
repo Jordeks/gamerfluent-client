@@ -296,3 +296,6 @@ body {
   margin-top: 16rem; }
   .newsfeed > * {
     transform: skewY(7deg); }
+
+.top-users {
+  padding: 30rem 0; }

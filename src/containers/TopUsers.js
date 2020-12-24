@@ -4,7 +4,7 @@ import UserCard from '../components/UserCard'
 export default class TopUsers extends Component {
     render() {
         return (
-            <div>
+            <div className='top-users'>
                 I hold top User Cards
                 <UserCard />
             </div>
