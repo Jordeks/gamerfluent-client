@@ -244,6 +244,12 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
+.footer {
+  background-color: #3A0CA3;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #f7f7f7; }
+
 .features__box {
   color: #999;
   position: relative;
