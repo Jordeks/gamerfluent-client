@@ -1,7 +1,10 @@
+import DashContent from './DashContent'
+
 const Dashboard = () => {
     return (
         <div>
-            Hello from Dashboard
+            <ProfileSideBar />
+            <DashContent />
         </div>
     )
 }
