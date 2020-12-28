@@ -3,7 +3,7 @@ import ProfileSideBar from '../components/ProfileSideBar'
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className='dashboard'>
             <ProfileSideBar />
             <DashContent />
         </div>

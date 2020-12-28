@@ -269,6 +269,10 @@ body {
   font-size: 1.4rem;
   color: #f7f7f7; }
 
+.dashboard {
+  height: 90vh;
+  background-color: aquamarine; }
+
 .features__box {
   color: #999;
   position: relative;
