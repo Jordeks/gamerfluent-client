@@ -254,6 +254,9 @@ body {
     box-shadow: 0 1rem 1rem rgba(14, 17, 17, 0.25);
     transform: translateY(0); }
 
+.sidebar {
+  flex: 0, 0, 33.3%; }
+
 .header {
   height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(76, 201, 240, 0.8), rgba(58, 12, 163, 0.8)), url(./imgs/header.jpg);
@@ -271,7 +274,10 @@ body {
 
 .dashboard {
   height: 90vh;
+  display: flex;
   background-color: aquamarine; }
+  .dashboard__content {
+    flex: 0 0 66.7%; }
 
 .features__box {
   color: #999;

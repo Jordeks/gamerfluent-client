@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashContent = () => {
     return (
-        <div>
+        <div className='dashboard__content'>
             Hi I am Dash Content
         </div>
     )

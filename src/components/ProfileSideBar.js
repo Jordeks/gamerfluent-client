@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfileSideBar = () => {
     return (
-        <div className='profile-sidebar'>
+        <div className='sidebar'>
             I am the side bar
         </div>
     )
