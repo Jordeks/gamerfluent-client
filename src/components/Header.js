@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 const Header = () => {
     return (
         <>
@@ -9,7 +11,7 @@ const Header = () => {
                 The Spawn Point for All Your gaming needs 
             </h3>
         </div>
-        <button className='button'>Go to your dash</button>
+        <NavLink className='button' to="/dashboard">Go to your dash</NavLink>
         </>
     )
 }
