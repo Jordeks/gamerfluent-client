@@ -154,7 +154,7 @@ body {
     font-weight: 500;
     letter-spacing: .5rem;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 10%;
     animation: slideInBlurredRight 1.2s ease-out; }
 
@@ -247,7 +247,7 @@ body {
   font-size: 2rem; }
   .button:hover {
     background-color: #7209B7;
-    color: #333;
+    color: #ebebeb;
     box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.4);
     transform: translateY(-2px); }
   .button:active {
