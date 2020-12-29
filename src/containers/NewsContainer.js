@@ -12,14 +12,16 @@ export default class NewsContainer extends Component {
     componentDidMount(){
         fetch('http://localhost:3000/api/v1/blogs')
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => this.setState({blogs: data}));
     }
 
     render() {
+        console.log(this.state)
         return (
             <>
                 <h1>I HOLD ALL THE NEWS</h1>
-                <NewsCard className='card'/>
+                { this.state.blogs.map(blog => <NewsCard className='card' {...blog}/>) }
+                
             </>
         )
     }
