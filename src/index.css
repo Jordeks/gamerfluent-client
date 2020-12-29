@@ -286,6 +286,8 @@ body {
     .card__side--back {
       background-color: #ebebeb;
       transform: rotateY(180deg); }
+    .card__side--post {
+      background-image: linear-gradient(to left bottom, rgba(114, 9, 183, 0.8), rgba(72, 12, 168, 0.8)); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {

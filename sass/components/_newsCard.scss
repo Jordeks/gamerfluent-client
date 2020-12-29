@@ -41,6 +41,12 @@
             
         }
 
+        &--post {
+            background-image: linear-gradient(to left bottom, 
+                                    rgba($color-secondary-light, 0.8), 
+                                    rgba($color-secondary-dark, 0.8));
+        }
+
     }
     
   
