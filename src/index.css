@@ -263,15 +263,18 @@ body {
   align-items: space-around;
   justify-content: center; }
   .sidebar__item {
-    flex: 0 0 30%; }
+    flex: 0 0 30%;
+    margin-top: -8rem; }
   .sidebar__pic {
     border-radius: 50%;
     width: 20rem;
     height: 20rem; }
-  .sidebar__header, .sidebarsubheader {
+  .sidebar__header, .sidebar__subheader {
     color: #ebebeb;
     font-weight: 400;
     font-size: 4rem; }
+  .sidebar__subheader {
+    font-size: 3rem; }
 
 .header {
   height: 90vh;
@@ -290,8 +293,7 @@ body {
 
 .dashboard {
   height: 90vh;
-  display: flex;
-  background-color: aquamarine; }
+  display: flex; }
   .dashboard__content {
     flex: 0 0 75%; }
 

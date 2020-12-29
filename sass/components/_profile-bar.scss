@@ -13,6 +13,7 @@
 
     &__item {
         flex: 0 0 30%; 
+        margin-top: -8rem;
     }
 
     &__pic {
@@ -22,10 +23,14 @@
     }
 
     &__header, 
-    &subheader {
+    &__subheader {
         color: $color-white; 
         font-weight: 400; 
         font-size: 4rem; 
+    }
+
+    &__subheader {
+        font-size: 3rem; 
     }
 
     
