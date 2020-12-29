@@ -6,7 +6,7 @@ const NewsCard = (props) => {
                 <h1>{ title }</h1> 
                 <h4>By: { username }</h4> 
             </div>        
-            <div className='card__side card__side--front'>
+            <div className='card__side card__side--back'>
                 <p>{ content }</p>
             </div>
             
