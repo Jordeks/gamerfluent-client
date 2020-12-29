@@ -10,7 +10,7 @@ const DashContent = () => {
         <div className='dashboard__content'>
             <h1 className='heading-secondary'>Welcome to your Dashboard!</h1>
             <NavLink className='button' to="/">
-                <svg>
+                <svg className='icon'>
                     <use href={sprite + '#icon-home3'} />
                 </svg>
             </NavLink>

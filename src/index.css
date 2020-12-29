@@ -254,6 +254,10 @@ body {
     box-shadow: 0 1rem 1rem rgba(14, 17, 17, 0.25);
     transform: translateY(0); }
 
+.icon {
+  width: 2.5rem;
+  height: 2.5rem; }
+
 .sidebar {
   flex: 0 0 25%;
   height: 90vh;
