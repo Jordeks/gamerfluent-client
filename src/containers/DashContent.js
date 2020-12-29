@@ -3,7 +3,7 @@ import React from 'react'
 const DashContent = () => {
     return (
         <div className='dashboard__content'>
-            Hi I am Dash Content
+            <h1 className='heading-secondary'>Welcome to your Dashboard!</h1>
         </div>
     )
 }
