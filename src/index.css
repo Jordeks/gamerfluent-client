@@ -269,7 +269,7 @@ body {
   -moz-perspective: 150rem;
   flex: 0 0 22%;
   transform-style: preserve-3d;
-  height: 30rem;
+  height: 40rem;
   margin-top: 3rem; }
   .card__side {
     height: inherit;
