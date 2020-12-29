@@ -260,21 +260,21 @@ body {
   background-image: linear-gradient(to right bottom, rgba(76, 201, 240, 0.8), rgba(58, 12, 163, 0.8));
   display: flex;
   flex-direction: column;
-  align-items: space-around;
-  justify-content: center; }
+  align-items: center;
+  justify-content: space-around; }
   .sidebar__item {
-    flex: 0 0 30%;
-    margin-top: -8rem; }
+    flex: 0 0 20%;
+    margin-top: -2rem; }
   .sidebar__pic {
     border-radius: 50%;
-    width: 20rem;
-    height: 20rem; }
+    width: 16rem;
+    height: 16rem; }
   .sidebar__header, .sidebar__subheader {
     color: #ebebeb;
     font-weight: 400;
-    font-size: 4rem; }
-  .sidebar__subheader {
     font-size: 3rem; }
+  .sidebar__subheader {
+    font-size: 2.5rem; }
 
 .header {
   height: 90vh;
