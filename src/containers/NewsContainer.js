@@ -14,7 +14,7 @@ export default class NewsContainer extends Component {
             .then(response => response.json())
             .then(data => this.setState({blogs: data}));
     }
-
+// this will eventually iterate through the most liked blogs and content 
     render() {
         return (
             <div className='cards'>
