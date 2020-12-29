@@ -4,6 +4,17 @@ import NewsCard from '../components/NewsCard'
 // import { Carousel } from 'react-responsive-carousel';
 
 export default class NewsContainer extends Component {
+
+    state = {
+        blogs: []
+    }
+
+    componentDidMount(){
+        fetch('http://localhost:3000/api/v1/blogs')
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
+
     render() {
         return (
             <>
