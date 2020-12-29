@@ -1,7 +1,10 @@
-const NewsCard = () => {
+const NewsCard = (props) => {
+    const { title, content, username } = props
     return (
         <>
-            <h1>Hello from NewsCard</h1>
+            <h1>{ title }</h1>
+            <h4>By: { username }</h4>
+            <p>{ content }</p>
         </>
     )
 }
