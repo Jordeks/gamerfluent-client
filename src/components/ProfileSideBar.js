@@ -7,9 +7,14 @@ const ProfileSideBar = () => {
             <figure className='sidebar__item'>
                 <img src={profpic} alt='profile-pic' className='sidebar__pic'></img>
             </figure>
-            <div>
-                <h2 className='sidebar__item'> Full Name</h2>
-                <h3 className='sidebar_item'>Username</h3>
+            <div className='sidebar__item'>
+                <h2 className='sidebar__header'> Full Name</h2>
+                <h3 className='sidebar__subheader'>Username</h3>
+            </div>
+            <div className='sidebar__item'>
+                <h2 className='sidebar__header'>Level: 49</h2> 
+                <h2 className='sidebar__header'>XP: 14/40</h2>
+                <div>PROGRESS BAR HERE</div>
             </div>
             
         </div>
