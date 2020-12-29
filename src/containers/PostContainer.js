@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Post from '../components/Post'
+import PostCard from '../components/PostCard'
 
 export default class PostContainer extends Component {
     render() {
         return (
             <div>
                 <h1>Hi From PostContainer</h1>
-                <Post />
+                <PostCard />
             </div>
         )
     }
