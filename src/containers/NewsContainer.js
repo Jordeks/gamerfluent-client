@@ -16,7 +16,6 @@ export default class NewsContainer extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <>
                 <h1>I HOLD ALL THE NEWS</h1>
