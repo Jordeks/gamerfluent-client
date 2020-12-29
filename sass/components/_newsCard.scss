@@ -10,22 +10,18 @@
     // FUNCTIONALITY
     perspective: 150rem;
     -moz-perspective: 150rem;
-    flex: 0 1 22%;
+    flex: 0 0 22%;
     transform-style:preserve-3d;
     height: 30rem;
     margin-top: 3rem;
-    
-    &__heading {
-        @include absCenter
-    }
     
     &__side {
         height: inherit;
         transition: all .8s ease;
         position: absolute;
-        // top: 0;
-        // left: 0;
-        width: 100%;
+        top: 0;
+        left: 0;
+        // width: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
@@ -35,12 +31,12 @@
 
         &--front {
             background-image: linear-gradient(to left bottom, 
-                                    rgba($color-primary-light, 0.8), 
-                                    rgba($color-primary-dark-3, 0.8));
+                                    rgba($color-primary-light-1, 0.8), 
+                                    rgba($color-primary-dark-2, 0.8));
         }
 
         &--back {
-            background-color: $color-whiter; 
+            background-color: $color-white; 
             transform: rotateY(180deg);
             
         }

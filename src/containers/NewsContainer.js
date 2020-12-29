@@ -19,7 +19,7 @@ export default class NewsContainer extends Component {
         return (
             <div className='cards'>
                 <h1>I HOLD ALL THE NEWS</h1>
-                { this.state.blogs.map(blog => <NewsCard className='card' key={blog.id} {...blog}/>) }
+                { this.state.blogs.map(blog => <NewsCard key={blog.id} {...blog}/>) }
                 
             </div>
         )
