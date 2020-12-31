@@ -17,9 +17,11 @@ export default class PostContainer extends Component {
 
     render() {
         return (
-            <div className = 'cards'>
-                { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog}/>) }
-            </div>
+            <>
+                <div className = 'cards'>
+                    { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog}/>) }
+                </div>
+            </>
         )
     }
 }

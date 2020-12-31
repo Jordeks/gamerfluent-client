@@ -1,17 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Post extends Component {
-    render() {
-        return (
-            <div className='card card'>
+const PostCard = (props) => {
+    const { title, content, username } = props
+    return (
+        <div className='card'>
                 <div className='card__side card__side--front card__side--post'>
-                    <h1>Full Name of Current User</h1> 
-                    <h4>By: Username of Current User</h4> 
+                    <h1>{ title }</h1> 
+                    <h4>By: { username }</h4> 
                 </div>        
                 <div className='card__side card__side--back'>
-                    <p>Current User's blog content</p>
+                    <p>{ content }</p>
                 </div>
-            </div>
-        )
-    }
+        </div>
+    )
 }
+
+export default PostCard
