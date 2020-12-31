@@ -339,6 +339,8 @@ body {
   display: flex; }
   .dashboard__content {
     flex: 0 0 75%; }
+  .dashboard__posts {
+    margin-top: 2rem; }
 
 .features__box {
   color: #999;
