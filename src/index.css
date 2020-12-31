@@ -186,7 +186,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #F72585, #B5179E);
+  background-image: linear-gradient(to right, #F72585, #C51D6A);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
@@ -246,7 +246,7 @@ body {
   text-decoration: none;
   font-size: 2rem; }
   .button:hover {
-    background-color: #7209B7;
+    background-color: #C51D6A;
     color: #ebebeb;
     box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.4);
     transform: translateY(-2px); }
