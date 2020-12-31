@@ -16,6 +16,18 @@ export default class PostContainer extends Component {
             .then(data => this.setState({blogs: data}));
     }
 
+    addBlog = (blog) => {
+        fetch(`http://localhost:3000/blogs`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(blog),
+        })
+        .then(response => response.json())
+        .then(newBlog => this.setState({blogs: [...this.state.blogs, newBlog]}))
+      }
+
     render() {
         return (
             <div className='dashboard__posts'>
