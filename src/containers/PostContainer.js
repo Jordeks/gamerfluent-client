@@ -18,7 +18,7 @@ export default class PostContainer extends Component {
 
     render() {
         return (
-            <>
+            <div className='dashboard__posts'>
                 <button className='button'>
                     <svg className='icon icon--light'>
                         <use href={sprite + '#icon-plus'} />
@@ -28,7 +28,7 @@ export default class PostContainer extends Component {
                 <div className = 'cards'>
                     { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog}/>) }
                 </div>
-            </>
+            </div>
         )
     }
 }

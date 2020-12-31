@@ -239,17 +239,21 @@ body {
   border-radius: 2rem;
   border: none;
   padding: 1rem 1.5rem;
+  width: auto;
   background-color: #F72585;
   color: #333;
   outline: none;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem; }
+  .button__text {
+    margin-left: .7rem; }
   .button:hover {
     background-color: #C51D6A;
     color: #ebebeb;
     box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.4);
-    transform: translateY(-2px); }
+    transform: translateY(-2px);
+    fill: #ebebeb; }
   .button:active {
     box-shadow: 0 1rem 1rem rgba(14, 17, 17, 0.25);
     transform: translateY(0); }

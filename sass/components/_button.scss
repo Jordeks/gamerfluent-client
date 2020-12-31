@@ -2,18 +2,24 @@
         border-radius: 2rem;
         border: none;
         padding: 1rem 1.5rem;
+        width: auto; 
         background-color: $color-tertiary;
         color: $color-gray-dark-2;
         outline: none;
         cursor: pointer;
         text-decoration: none;
         font-size: 2rem;
+
+        &__text{
+            margin-left: .7rem; 
+        }
     
         &:hover {
             background-color: $color-tertiary-dark;
             color: $color-white;
             box-shadow: 0 1rem 2rem rgba($color-black, .40);
             transform: translateY(-2px);
+            fill: $color-white; 
         }
           
         &:active {
