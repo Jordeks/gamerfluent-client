@@ -61,14 +61,7 @@ export default class PostContainer extends Component {
                         <Droppable droppableId='cards'>
                         {(provided) => (
                             <div className='cards' {...provided.droppableProps} ref={provided.innerRef}>
-                                { this.state.blogs.map(blog => 
-                                    <Draggable key={blog.id} draggableId={blog.id} >
-                                    {(provided) => (
-                                        <PostCard key={blog.id} {...blog} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}/> 
-                                     
-                                    )}
-                                    </Draggable>
-                                )}
+                                { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog} /> )}
                             </div>
                         )}
                         </Droppable>
