@@ -4,7 +4,7 @@ import { Draggable } from 'react-beautiful-dnd';
 const PostCard = (props) => {
     const { title, content, username, id } = props
     return (
-        <Draggable key={id} draggableId={id}>
+        <Draggable key={id} draggableId={(id).toString()}>
         {(provided) => (
             <div className='card' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                     <div className='card__side card__side--front card__side--post'>
