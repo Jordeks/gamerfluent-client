@@ -16,7 +16,7 @@
     &__content {
       background-image: linear-gradient(to right bottom, 
                                     rgba($color-primary, 1), 
-                                    rgba($color-primary-dark-3, 1));
+                                    rgba($color-primary-dark-2, 1));
       margin: 15% auto; /* 15% from the top and centered */
       padding: 20px;
       width: 70%; /* Could be more or less, depending on screen size */
@@ -33,7 +33,7 @@
   
     &:hover,
     &:focus {
-      color: $color-secondary-bold;
+      color: $color-tertiary;
       text-decoration: none;
       cursor: pointer;
     }
