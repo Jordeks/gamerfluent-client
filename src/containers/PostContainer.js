@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PostCard from '../components/PostCard'
+
 import sprite from '../imgs/sprite.svg'
 
 // will iterate through current users blogs 
@@ -34,10 +35,21 @@ export default class PostContainer extends Component {
         .then(newBlog => this.setState({blogs: [...this.state.blogs, newBlog]}))
       }
 
+      toggleModal = () => this.setState({modal: !this.state.modal})
+
+      openNewModal = () => {this.setState({
+        modal: true, 
+        form: {
+            title: '',
+            content: '', 
+        }
+    })
+  }
+
     render() {
         return (
             <div className='dashboard__posts'>
-                <button className='button'>
+                <button className='button' onClick={ this.openNewModal }>
                     <svg className='icon icon--light'>
                         <use href={sprite + '#icon-plus'} />
                     </svg>
@@ -46,6 +58,7 @@ export default class PostContainer extends Component {
                 <div className = 'cards'>
                     { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog}/>) }
                 </div>
+                <Modal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} />
             </div>
         )
     }
