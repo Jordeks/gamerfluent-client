@@ -8,8 +8,11 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 export default class PostContainer extends Component {
 
+    
+
     state = {
         blogs: [], 
+        updateBlogs: [],
         modal: false, 
         form: {
             id: null,
@@ -47,10 +50,18 @@ export default class PostContainer extends Component {
     })
   }
 
+       handleOnDragEnd = (result) => {
+        const items = Array.from(this.state.blogs);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
+
+        this.state.updateBlogs(items);
+      }
+
     render() {
         return (
             <>
-                <DragDropContext>
+                <DragDropContext onDragEnd={this.handleOnDragEnd}>
                 <Droppable droppableId='cards'>
                         {(provided) => (
                     <div className='dashboard__posts'  {...provided.droppableProps} ref={provided.innerRef}>
@@ -64,7 +75,7 @@ export default class PostContainer extends Component {
                             <div className='cards'>
                                 { this.state.blogs.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
                             </div>
-        
+                        {provided.placeholder}
                     </div>
                     )}
                 </Droppable>
