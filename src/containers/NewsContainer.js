@@ -6,7 +6,7 @@ import NewsCard from '../components/NewsCard'
 export default class NewsContainer extends Component {
 
     state = {
-        blogs: []
+        blogs: [],
     }
 
     componentDidMount(){

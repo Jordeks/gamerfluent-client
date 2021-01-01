@@ -7,7 +7,13 @@ import sprite from '../imgs/sprite.svg'
 export default class PostContainer extends Component {
 
     state = {
-        blogs: []
+        blogs: [], 
+        modal: false, 
+        form: {
+            id: null,
+            title: '',
+            content: '',
+        } ,
     }
 
     componentDidMount(){
