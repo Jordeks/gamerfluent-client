@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PostCard from '../components/PostCard'
 import Modal from '../components/Modal'
 import sprite from '../imgs/sprite.svg'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 // will iterate through current users blogs 
 
@@ -48,18 +49,26 @@ export default class PostContainer extends Component {
 
     render() {
         return (
-            <div className='dashboard__posts'>
-                <button className='button' onClick={ this.openNewModal }>
-                    <svg className='icon icon--light'>
-                        <use href={sprite + '#icon-plus'} />
-                    </svg>
-                    <span className='button__text'>Add A Post</span>
-                </button>
-                <div className = 'cards'>
-                    { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog}/>) }
-                </div>
-                <Modal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} />
-            </div>
-        )
+            <>
+                <DragDropContext>
+                    <div className='dashboard__posts'>
+                        <button className='button' onClick={ this.openNewModal }>
+                            <svg className='icon icon--light'>
+                                <use href={sprite + '#icon-plus'} />
+                            </svg>
+                            <span className='button__text'>Add A Post</span>
+                        </button>
+                        <Droppable droppableId='cards'>
+                        {(provided) => (
+                            <div className = 'cards'>
+                                { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog}/>) }
+                            </div>
+                        )}
+                        </Droppable>
+                    </div>
+                </DragDropContext>
+            <Modal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} />
+            </>
+            )
     }
 }
