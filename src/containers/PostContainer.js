@@ -55,7 +55,6 @@ export default class PostContainer extends Component {
         const [reorderedItem] = items.splice(result.source.index, 1);
         items.splice(result.destination.index, 0, reorderedItem);
 
-        this.state.updateBlogs(items);
       }
 
     render() {
