@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PostCard from '../components/PostCard'
-
+import Modal from '../components/Modal'
 import sprite from '../imgs/sprite.svg'
 
 // will iterate through current users blogs 
