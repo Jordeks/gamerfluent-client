@@ -51,21 +51,23 @@ export default class PostContainer extends Component {
         return (
             <>
                 <DragDropContext>
-                    <div className='dashboard__posts'>
+                <Droppable droppableId='cards'>
+                        {(provided) => (
+                    <div className='dashboard__posts'  {...provided.droppableProps} ref={provided.innerRef}>
                         <button className='button' onClick={ this.openNewModal }>
                             <svg className='icon icon--light'>
                                 <use href={sprite + '#icon-plus'} />
                             </svg>
                             <span className='button__text'>Add A Post</span>
                         </button>
-                        <Droppable droppableId='cards'>
-                        {(provided) => (
-                            <div className='cards' {...provided.droppableProps} ref={provided.innerRef}>
+                        
+                            <div className='cards'>
                                 { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog} /> )}
                             </div>
-                        )}
-                        </Droppable>
+        
                     </div>
+                    )}
+                </Droppable>
                 </DragDropContext>
             <Modal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} />
             </>
