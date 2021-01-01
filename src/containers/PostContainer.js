@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PostCard from '../components/PostCard'
 import Modal from '../components/Modal'
 import sprite from '../imgs/sprite.svg'
-import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 // will iterate through current users blogs 
 
@@ -60,8 +60,15 @@ export default class PostContainer extends Component {
                         </button>
                         <Droppable droppableId='cards'>
                         {(provided) => (
-                            <div className = 'cards'>
-                                { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog}/>) }
+                            <div className='cards' {...provided.droppableProps} ref={provided.innerRef}>
+                                { this.state.blogs.map(blog => 
+                                    <Draggable key={blog.id} draggableId={blog.id} >
+                                    {(provided) => (
+                                        <PostCard key={blog.id} {...blog} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}/> 
+                                     
+                                    )}
+                                    </Draggable>
+                                )}
                             </div>
                         )}
                         </Droppable>
