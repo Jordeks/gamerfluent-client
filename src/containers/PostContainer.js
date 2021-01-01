@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PostCard from '../components/PostCard'
 import Modal from '../components/Modal'
 import sprite from '../imgs/sprite.svg'
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 // will iterate through current users blogs 
 
@@ -62,7 +62,7 @@ export default class PostContainer extends Component {
                         </button>
                         
                             <div className='cards'>
-                                { this.state.blogs.map(blog => <PostCard key={blog.id} {...blog} /> )}
+                                { this.state.blogs.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
                             </div>
         
                     </div>
