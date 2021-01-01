@@ -13,28 +13,26 @@ const Modal = () => {
                 <span onClick={props.toggle} className="close">&times;</span>
                 <form className='form' onSubmit={handleSubmit(props.onSubmit)}>  
                     <div className='form__group'>                 
-                        <input placeholder="Habit Name" 
+                        <input placeholder="Title" 
                                className='form__input' 
-                               type="text" name="name" 
+                               type="text" name="title" 
                                ref={register({ required: true, maxLength: 20 })}  
                                onChange={props.onChange} 
-                               value={props.name}/>
-                        {errors.name && errors.name.type === 'required' && <span>This field is required</span>}
-                        {errors.name && errors.name.type === 'maxLength' && <span>Maxium of 20 characters</span>}
-                        <label htmlFor="name" className="form__label u-margin-left-small">Habit Name </label>
+                               value={props.title}/>
+                        {errors.title && errors.title.type === 'required' && <span>This field is required</span>}
+                        {errors.title && errors.title.type === 'maxLength' && <span>Maxium of 20 characters</span>}
+                        <label htmlFor="title" className="form__label u-margin-left-small">Habit Name </label>
                     </div>
                     <div className='form__group'> 
-                        <input placeholder="Frequency(per week)" 
+                        <input placeholder="content" 
                                className='form__input' 
-                               type="number" 
-                               name="frequency" 
+                               type="textarea" 
+                               name="content" 
                                ref={register({ required: true, min: 1, max: 7  })} 
                                onChange={props.onChange} 
-                               value={props.frequency}/>
-                        {errors.frequency && errors.frequency.type === 'required' && <span>This field is required</span>}
-                        {errors.frequency && errors.frequency.type === 'min' && <span>Minimum of 1</span>}
-                        {errors.frequency && errors.frequency.type === 'max' && <span>There are only 7 days in a week!</span>}
-                        <label htmlFor="frequency" className="form__label u-margin-left-small">Habit Frequency(per week)</label>
+                               value={props.content}/>
+                        {errors.content && errors.content.type === 'required' && <span>This field is required</span>}
+                        <label htmlFor="content" className="form__label u-margin-left-small">Habit Frequency(per week)</label>
                     </div>
                     <input className='btn btn--small u-margin-left-small' type="submit" value="Submit" />
                 </form>
