@@ -17,6 +17,17 @@ const PostContainer = () => {
                                 content: '',
                             })
 
+    const toggleModal = () => setModal({modal: !modal})
+
+    const openNewModal = () => {setModal({
+        modal: true, 
+        })
+        setForm({
+            title: '',
+            content: '', 
+        })
+    }
+
     return (
         <div>
             <DragDropContext onDragEnd={ handleOnDragEnd }>
@@ -91,12 +102,12 @@ export default PostContainer
 //     })
 //   }
 
-//        handleOnDragEnd = (result) => {
-//         const items = Array.from(this.state.blogs);
-//         const [reorderedItem] = items.splice(result.source.index, 1);
-//         items.splice(result.destination.index, 0, reorderedItem);
+    //    handleOnDragEnd = (result) => {
+    //     const items = Array.from(this.state.blogs);
+    //     const [reorderedItem] = items.splice(result.source.index, 1);
+    //     items.splice(result.destination.index, 0, reorderedItem);
 
-//       }
+    //   }
 
 //     render() {
 //         return (
