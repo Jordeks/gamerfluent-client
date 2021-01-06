@@ -3,6 +3,7 @@ import PostCard from '../components/PostCard'
 import Modal from '../components/Modal'
 import sprite from '../imgs/sprite.svg'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import { getBlogs } from '../services/blog'
 
 // will iterate through current users blogs 
 
