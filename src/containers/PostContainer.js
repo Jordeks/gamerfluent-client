@@ -18,7 +18,7 @@ const PostContainer = () => {
                                 content: '',
                             })
 
-    const toggleModal = () => setModal({modal: !modal})
+    const toggleModal = () => setModal( !modal )
 
     const openNewModal = () => {setModal({
         modal: true, 
