@@ -14,6 +14,8 @@ const NewsContainer = () => {
                 setBlogs(data)
         })
     })
+
+    // this will eventually iterate through the most liked blogs and content 
     return (
         <div className='cards'>
             { blogs.map(blog => <NewsCard key={blog.id} {...blog}/>) }
@@ -35,7 +37,7 @@ export default NewsContainer
 //             .then(response => response.json())
 //             .then(data => this.setState({blogs: data}));
 //     }
-// this will eventually iterate through the most liked blogs and content 
+
 //     render() {
 //         return (
 //             <div className='cards'>
