@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PostCard from '../components/PostCard'
 import Modal from '../components/Modal'
 import sprite from '../imgs/sprite.svg'
@@ -17,6 +17,11 @@ const PostContainer = () => {
                                 title: '',
                                 content: '',
                             })
+
+    useEffect(() => {
+        getBlogs()
+        .then(data => setBlogs(data))
+    })
 
     const toggleModal = () => setModal( !modal )
 
