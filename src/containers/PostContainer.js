@@ -20,15 +20,11 @@ const PostContainer = () => {
                             })
 
     useEffect(() => {
-        let mounted = true;
         getBlogs()
         .then(data => {
-            if(mounted) {
                 setBlogs(data)
-            }
         })
-        return () => mounted = false 
-    }, [])
+    })
 
     const toggleModal = () => setModal( !modal )
 
@@ -63,7 +59,7 @@ const PostContainer = () => {
                         </button>
                         
                             <div className='cards'>
-                                { blogsDnd.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
+                                {blogs.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
                             </div>
                         {provided.placeholder}
                     </div>
