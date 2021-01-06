@@ -28,6 +28,13 @@ const PostContainer = () => {
         })
     }
 
+    const handleOnDragEnd = (result) => {
+        // const items = Array.from(blogs);
+        // const [reorderedItem] = items.splice(result.source.index, 1);
+        // items.splice(result.destination.index, 0, reorderedItem);
+
+      }
+
     return (
         <div>
             <DragDropContext onDragEnd={ handleOnDragEnd }>
