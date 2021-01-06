@@ -5,7 +5,6 @@ import sprite from '../imgs/sprite.svg'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 // will iterate through current users blogs 
-import React from 'react'
 
 const PostContainer = () => {
     
@@ -20,7 +19,26 @@ const PostContainer = () => {
 
     return (
         <div>
-            
+            <DragDropContext onDragEnd={ handleOnDragEnd }>
+                <Droppable droppableId='cards'>
+                        {(provided) => (
+                    <div className='dashboard__posts'  {...provided.droppableProps} ref={provided.innerRef}>
+                        <button className='button' onClick={ openNewModal }>
+                            <svg className='icon icon--light'>
+                                <use href={sprite + '#icon-plus'} />
+                            </svg>
+                            <span className='button__text'>Add A Post</span>
+                        </button>
+                        
+                            <div className='cards'>
+                                { blogs.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
+                            </div>
+                        {provided.placeholder}
+                    </div>
+                    )}
+                </Droppable>
+            </DragDropContext>
+            <Modal toggle={ toggleModal } {...form} display={ modal } />
         </div>
     )
 }
@@ -82,28 +100,28 @@ export default PostContainer
 
 //     render() {
 //         return (
-//             <>
-//                 <DragDropContext onDragEnd={this.handleOnDragEnd}>
-//                 <Droppable droppableId='cards'>
-//                         {(provided) => (
-//                     <div className='dashboard__posts'  {...provided.droppableProps} ref={provided.innerRef}>
-//                         <button className='button' onClick={ this.openNewModal }>
-//                             <svg className='icon icon--light'>
-//                                 <use href={sprite + '#icon-plus'} />
-//                             </svg>
-//                             <span className='button__text'>Add A Post</span>
-//                         </button>
+            // <>
+            //     <DragDropContext onDragEnd={this.handleOnDragEnd}>
+            //     <Droppable droppableId='cards'>
+            //             {(provided) => (
+            //         <div className='dashboard__posts'  {...provided.droppableProps} ref={provided.innerRef}>
+            //             <button className='button' onClick={ this.openNewModal }>
+            //                 <svg className='icon icon--light'>
+            //                     <use href={sprite + '#icon-plus'} />
+            //                 </svg>
+            //                 <span className='button__text'>Add A Post</span>
+            //             </button>
                         
-//                             <div className='cards'>
-//                                 { this.state.blogs.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
-//                             </div>
-//                         {provided.placeholder}
-//                     </div>
-//                     )}
-//                 </Droppable>
-//                 </DragDropContext>
-//             <Modal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} />
-//             </>
+            //                 <div className='cards'>
+            //                     { this.state.blogs.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
+            //                 </div>
+            //             {provided.placeholder}
+            //         </div>
+            //         )}
+            //     </Droppable>
+            //     </DragDropContext>
+            // <Modal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} />
+            // </>
 //             )
 //     }
 // }
