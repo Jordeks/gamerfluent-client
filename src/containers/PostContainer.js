@@ -10,6 +10,7 @@ import { getBlogs } from '../services/blog'
 const PostContainer = () => {
     
     const [blogs, setBlogs] = useState([])
+    const [blogsDnd, updateBlogs] = useState(blogs)
     const [modal, setModal] = useState(false)
     const [form, setForm] = useState(
                             {
@@ -19,9 +20,15 @@ const PostContainer = () => {
                             })
 
     useEffect(() => {
+        let mounted = true;
         getBlogs()
-        .then(data => setBlogs(data))
-    })
+        .then(data => {
+            if(mounted) {
+                setBlogs(data)
+            }
+        })
+        return () => mounted = false 
+    }, [])
 
     const toggleModal = () => setModal( !modal )
 
@@ -35,10 +42,11 @@ const PostContainer = () => {
     }
 
     const handleOnDragEnd = (result) => {
-        // const items = Array.from(blogs);
-        // const [reorderedItem] = items.splice(result.source.index, 1);
-        // items.splice(result.destination.index, 0, reorderedItem);
+        const items = Array.from(blogs);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
 
+        updateBlogs(items)
       }
 
     return (
@@ -55,7 +63,7 @@ const PostContainer = () => {
                         </button>
                         
                             <div className='cards'>
-                                { blogs.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
+                                { blogsDnd.map((blog, index) => <PostCard key={blog.id} {...blog} index={index}/> )}
                             </div>
                         {provided.placeholder}
                     </div>
