@@ -15,6 +15,17 @@ const NewsContainer = () => {
         })
     })
 
+    // useEffect(() => {
+    //     let mounted = true;
+    //     getNews()
+    //       .then(data => {
+    //         if(mounted) {
+    //           setBlogs(data)
+    //         }
+    //       })
+    //     return () => mounted = false;
+    //   }, [])
+
     // this will eventually iterate through the most liked blogs and content 
     return (
         <div className='cards'>
