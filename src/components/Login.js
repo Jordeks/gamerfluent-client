@@ -11,15 +11,8 @@ const Login = () => {
 
   const onSubmit = event => {
     event.preventDefault()
-    console.log('when logged in', targets)
-    
     login(targets)
-      .then(data => {
-        console.log('Success:', data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+      
     setTargets({ username: '', password: '' })
   }
 
