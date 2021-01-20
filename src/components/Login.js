@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { login } from '../services/user'
 
 const Login = () => {
   const [targets, setTargets] = useState({ username: '', password: ''})
@@ -11,7 +12,15 @@ const Login = () => {
   const onSubmit = event => {
     event.preventDefault()
     console.log('when logged in', targets)
-    setTargets({ username: '', password: ''})
+    
+    login(targets)
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    setTargets({ username: '', password: '' })
   }
 
   return (
