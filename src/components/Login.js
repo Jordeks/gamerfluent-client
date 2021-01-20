@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { login } from '../services/user'
 
-const Login = () => {
+const Login = (props) => {
   const [targets, setTargets] = useState({ username: '', password: ''})
 
   const onChange = event => {
@@ -11,10 +11,12 @@ const Login = () => {
 
   const onSubmit = event => {
     event.preventDefault()
-    login(targets)
+    login(targets, props.handleLogin)
       
     setTargets({ username: '', password: '' })
   }
+
+  console.log(props.handleLogin)
 
   return (
     <div>
