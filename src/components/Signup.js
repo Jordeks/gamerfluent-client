@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 const Signup = () => {
   const [targets, setTargets] = useState({})
 
-const onChange = event => {
-  setTargets({...targets, [`${event.target.name}`]: event.target.value})
-}
+  const onChange = event => {
+    setTargets({...targets, [`${event.target.name}`]: event.target.value})
+  }
 
   return (
     <div>
