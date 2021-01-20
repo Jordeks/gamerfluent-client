@@ -2,22 +2,17 @@ import React, { useState } from 'react'
 
 
 const Signup = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [targets, setTargets] = useState({})
 
-const onUsernameChange = event => {
-    setUsername(event.target.value)
+const onChange = event => {
+  setTargets({...targets, [`${event.target.name}`]: event.target.value})
 }
-
-const onPasswordChange = event => {
-  setPassword(event.target.value)
-}
-console.log(username, password)
+console.log(targets)
   return (
     <div>
       <form>
-        <input type='text' placeholder='username' onChange={onUsernameChange} name='Username' value={ username }/>
-        <input type='password' placeholder='password' onChange={onPasswordChange} name='Password' value={ password } />
+        <input type='text' placeholder='username' onChange={onChange} name='Username' value={ targets.username }/>
+        <input type='password' placeholder='password' onChange={onChange} name='Password' value={ targets.password } />
         <button type='submit'>Sign up</button>
       </form>
     </div>
