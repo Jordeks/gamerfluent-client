@@ -12,8 +12,8 @@ const Signup = () => {
     <div>
       <NavLink className='button' to='/'>Landing Page</NavLink>
       <form>
-        <input type='text' placeholder='username' onChange={onChange} name='Username' value={ targets.username }/>
-        <input type='password' placeholder='password' onChange={onChange} name='Password' value={ targets.password } />
+        <input type='text' placeholder='username' onChange={onChange} name='username' value={ targets.username }/>
+        <input type='password' placeholder='password' onChange={onChange} name='password' value={ targets.password } />
         <button className='button' type='submit'>Sign up</button>
       </form>
     </div>
