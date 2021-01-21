@@ -16,8 +16,6 @@ const Login = (props) => {
     setTargets({ username: '', password: '' })
   }
 
-  console.log(props.handleLogin)
-
   return (
     <div>
       <NavLink className='button' to='/'>Landing Page</NavLink>

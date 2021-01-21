@@ -12,7 +12,7 @@ export const login = (data, handleLogin) => {
   .then(data => {
     localStorage.setItem('token', data.jwt)
     handleLogin(data.user)
-    console.log('Success:', data);
+    // console.log('Success:', data);
   })
   .catch((error) => {
     console.error('Error:', error);

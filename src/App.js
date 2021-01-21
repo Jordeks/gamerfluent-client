@@ -12,14 +12,14 @@ const App = () => {
   const handleLogin = (user) => {
     setUser(user)
   }
-
+console.log(user)
   const history = useHistory();
   return (
     <div className="App">
       <Router>
         <Switch >
           <Route exact path="/dashboard" component={ Dashboard } history={history}/>
-          <Route exact path='/login' component={ Login} handleLogin={ handleLogin } history={history}/>
+          <Route exact path='/login' render={(props) => <Login {...props} handleLogin={ handleLogin } history={history}/>} />
           <Route exact path="/signup" component= { Signup } history={history}/>
           <Route exact path="/" component={ Home } history={history}/>
         </Switch>
