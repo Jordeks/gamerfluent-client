@@ -29,6 +29,17 @@ const App = () => {
     }
   }, [])
 
+  const handleAuthClick = () => {
+    const token = localStorage.getItem('token')
+    fetch(`http://localhost:3000/api/v1/user_is_authed`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+  }
+
   const history = useHistory();
   return (
     <div className="App">
