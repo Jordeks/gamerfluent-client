@@ -4,18 +4,8 @@ import profpic from '../imgs/profpic.jpg'
 
 export default class ProfileSideBar extends Component {
 
-    state = {
-        currentUser: {}
-    }
-
-    componentDidMount(){
-        fetch('http://localhost:3000/api/v1/users/1')
-            .then(response => response.json())
-            .then(data => this.setState({currentUser: data}));
-    }
-
     render (){
-        const { username, name } = this.state.currentUser
+        const { username, name } = this.props.user
         return (
             <div className='sidebar'>
                 <figure className='sidebar__item'>

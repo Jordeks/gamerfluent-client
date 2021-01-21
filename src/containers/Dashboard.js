@@ -1,10 +1,10 @@
 import DashContent from './DashContent'
 import ProfileSideBar from '../components/ProfileSideBar'
 
-const Dashboard = () => {
+const Dashboard = (props) => {
     return (
         <div className='dashboard'>
-            <ProfileSideBar />
+            <ProfileSideBar {...props} />
             <DashContent />
         </div>
     )
