@@ -12,7 +12,23 @@ const App = () => {
   const handleLogin = (user) => {
     setUser(user)
   }
-console.log(user)
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if(token){
+      fetch(`http://localhost:3000/auto_login`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      .then(res => res.json())
+      .then(data => {
+        setUser(data)
+        console.log(data)
+      })
+    }
+  }, [])
+
   const history = useHistory();
   return (
     <div className="App">
