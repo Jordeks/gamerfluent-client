@@ -24,7 +24,7 @@ const PostContainer = () => {
         .then(data => {
                 setBlogs(data)
         })
-    })
+    }, [])
 
     const toggleModal = () => setModal( !modal )
 

@@ -13,18 +13,7 @@ const NewsContainer = () => {
         .then(data => {
                 setBlogs(data)
         })
-    })
-
-    // useEffect(() => {
-    //     let mounted = true;
-    //     getNews()
-    //       .then(data => {
-    //         if(mounted) {
-    //           setBlogs(data)
-    //         }
-    //       })
-    //     return () => mounted = false;
-    //   }, [])
+    }, [])
 
     // this will eventually iterate through the most liked blogs and content 
     return (
@@ -35,25 +24,3 @@ const NewsContainer = () => {
 }
 
 export default NewsContainer
-
-
-// export default class NewsContainer extends Component {
-
-//     state = {
-//         blogs: [],
-//     }
-
-//     componentDidMount(){
-//         fetch('http://localhost:3000/api/v1/blogs')
-//             .then(response => response.json())
-//             .then(data => this.setState({blogs: data}));
-//     }
-
-//     render() {
-//         return (
-//             <div className='cards'>
-//                 { this.state.blogs.map(blog => <NewsCard key={blog.id} {...blog}/>) }
-//             </div>
-//         )
-//     }
-// }
