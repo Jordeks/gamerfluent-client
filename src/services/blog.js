@@ -1,6 +1,12 @@
-const URL = 'http://localhost:3000/api/v1/blogs'
+const URL = 'http://localhost:3000/api/v1/'
 
-export const getBlogs = () => {
-    return fetch(URL)
+const token = localStorage.getItem('token')
+
+export const getSessionUserBlogs = () => {
+    return fetch(`${URL}/session_user_blogs`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
     .then(response => response.json())
 }
