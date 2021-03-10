@@ -4,6 +4,12 @@ import profpic from '../imgs/profpic.jpg'
 
 export default class ProfileSideBar extends Component {
 
+
+    logout = () => {
+        console.log("clicked")
+        localStorage.token ? localStorage.removeItem('token') : sessionStorage.removeItem('token')
+    }
+
     render (){
         const { username, name } = this.props.user
         return (
@@ -20,6 +26,7 @@ export default class ProfileSideBar extends Component {
                     <h2 className='sidebar__header'>XP: 14/40</h2>
                     <div>PROGRESS BAR HERE</div>
                 </div>
+                <button onClick={ this.logout }>Log Out</button>
                 
             </div>
         )
