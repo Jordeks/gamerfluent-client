@@ -6,6 +6,7 @@ How to log out: https://medium.com/devgorilla/how-to-log-out-when-using-jwt-a8c7
 
 3/10/21
 Meks - Added a logout button, which does log out by removing the token (I think), because if you refresh app crashes because there is no user blogs to get for the post container
+  borrowed solve from James' project: https://github.com/Clannis/HubbleBook-Frontend/blob/main/src/reducers/userReducer.js#L14
   problem, when you login again, the first time it's broken but if you refresh it does work, probably some async issue
 
 ToDo: 
